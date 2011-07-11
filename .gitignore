@@ -32,4 +32,4 @@ TiledSharpNUnit/bin/
 # Include #
 ###########
 !/zlib.net.dll
-!TiledSharp/DTD/Map1.0.dtd
+!/TiledSharp/DTD/Map1.0.dtd
