@@ -35,7 +35,7 @@ namespace TiledSharpNUnit
 		
 		public void AssertCount(TileSet TestSet)
 		{
-			Assert.AreEqual(IterCalcTileCount(TestSet), TestSet.TileCount,
+			Assert.AreEqual(IterCalcTileCount(TestSet), TestSet.Count,
 			                "Source [Width {0}, Heigth {1}], Tile [Width {2}, Heigth {3}], Spacing {4}, Margin {5}",
 			                TestSet.ImageInfomation.Size.Width,
 			                TestSet.ImageInfomation.Size.Height,
@@ -99,12 +99,12 @@ namespace TiledSharpNUnit
 		
 		public void AssertPosition(TileSet TestSet)
 		{
-			for (int Id = 1; Id < TestSet.TileCount; Id++) {
-				int IterX, IterY, TestX, TestY;
-				TestSet.GetTilePos(Id, out TestX, out TestY);
+			for (int Id = 1; Id < TestSet.Count; Id++) {
+				int IterX, IterY;
+				System.Drawing.Point TestPos = TestSet.GetTilePos(Id);
 				IterCalcTilePos(TestSet, Id, out IterX, out IterY);
 				
-				Assert.AreEqual(IterX, TestX,
+				Assert.AreEqual(IterX, TestPos.X,
 				                "Error X, Id {6}, Source [Width {0}, Heigth {1}], Tile [Width {2}, Heigth {3}], Spacing {4}, Margin {5}",
 				                TestSet.ImageInfomation.Size.Width,
 				                TestSet.ImageInfomation.Size.Height,
@@ -114,7 +114,7 @@ namespace TiledSharpNUnit
 				                TestSet.Margin,
 				                Id);
 				
-				Assert.AreEqual(IterY, TestY,
+				Assert.AreEqual(IterY, TestPos.Y,
 				                "Error Y, Id {6}, Source [Width {0}, Heigth {1}], Tile [Width {2}, Heigth {3}], Spacing {4}, Margin {5}",
 				                TestSet.ImageInfomation.Size.Width,
 				                TestSet.ImageInfomation.Size.Height,

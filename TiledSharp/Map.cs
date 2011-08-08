@@ -55,10 +55,10 @@ namespace TiledSharp
 			TileId = Gid;
 			SetCount = 0;
 			foreach (TileSet tSetItem in this.TileSets) {
-				if(TileId - tSetItem.TileCount <= 0) {
+				if(TileId - tSetItem.Count <= 0) {
 					return;
 				}
-				TileId -= tSetItem.TileCount;
+				TileId -= tSetItem.Count;
 				SetCount++;
 			}
 			

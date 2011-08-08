@@ -34,47 +34,11 @@ namespace TiledSharp
 			this.ImageInfomation = ImgInf;
 		}
 		
-		public int TileCount {
-			get {
-				int x, y;
-				return this.GetTileCount(out x, out y);
-			}
-		}
+		#region LoadBitmap
 		
-		public void GetTilePos(int Id, out int x, out int y)
-		{
-			int CountX, CountY;
-			if(Id <= 0 || Id > this.GetTileCount(out CountX, out CountY))
-				throw new ArgumentOutOfRangeException("Id");
-			
-			Id--;
-			int Line = (Id / CountX);
-			y = this.Margin + (Line * this.TileSize.Height) + (Line * this.Spacing);
-			int Row = Id - (Line * CountX);
-			x = this.Margin + (Row * this.TileSize.Width) + (Row * this.Spacing);
-		}
-		
-		public int GetTileCount(out int x, out int y) {
-			x = this.ImageInfomation.Size.Width - (this.Margin * 2);
-			y = this.ImageInfomation.Size.Height - (this.Margin * 2);
-			
-			if(x < 0 || y < 0)
-				return 0;
-			
-			int SpaceLeft = x % (this.TileSize.Width + this.Spacing);
-			x /= (this.TileSize.Width + this.Spacing);
-			x += (SpaceLeft >= this.TileSize.Width) ? 1 : 0;
-			
-
-			SpaceLeft = y % (this.TileSize.Height + this.Spacing);
-			y /= (this.TileSize.Height + this.Spacing);
-			y += (SpaceLeft >= this.TileSize.Height) ? 1 : 0;
-			
-
-			
-			return x * y;
-		}
-		
+		/// <summary>
+		/// Loads the tiles bitmap.
+		/// </summary>
 		public Bitmap LoadBitmap ()
 		{
 			Bitmap SourceImage = new Bitmap(this.ImageInfomation.Source);
@@ -82,8 +46,6 @@ namespace TiledSharp
 				SourceImage.MakeTransparent(this.ImageInfomation.TransColor);
 			return SourceImage;
 		}
-		
-		#region LoadBitmaps
 		
 		/// <summary>
 		/// Load and cuts the image into tiles.
@@ -165,6 +127,53 @@ namespace TiledSharp
 		}
 		
 		#endregion
+		
+		public Point GetTilePos(int Id)
+		{
+			if(Id <= 0 || Id > this.Count)
+				throw new ArgumentOutOfRangeException("Id");
+			
+			//Id is 1 based. For math to work need 0 based.
+			Id--;
+			int Line = (Id / this.Rows);
+			int y = this.Margin + (Line * this.TileSize.Height) + (Line * this.Spacing);
+			int Row = Id - (Line * this.Rows);
+			int x = this.Margin + (Row * this.TileSize.Width) + (Row * this.Spacing);
+			
+			return new System.Drawing.Point(x, y);
+		}
+		
+		public int Count {
+			get { return this.Rows * this.Columns; }
+		}
+		
+		public int Rows {
+			get {
+				int x = this.ImageInfomation.Size.Width - (this.Margin * 2);
+				
+				if(x < this.TileSize.Width)
+					return 0;
+				
+				int SpaceLeft = x % (this.TileSize.Width + this.Spacing);
+				x /= (this.TileSize.Width + this.Spacing);
+				x += (SpaceLeft >= this.TileSize.Width) ? 1 : 0;
+				return x;
+			}
+		}
+		
+		public int Columns {
+			get {
+				int y = this.ImageInfomation.Size.Height - (this.Margin * 2);
+				
+				if(y < this.TileSize.Height)
+					return 0;
+				
+				int SpaceLeft = y % (this.TileSize.Height + this.Spacing);
+				y /= (this.TileSize.Height + this.Spacing);
+				y += (SpaceLeft >= this.TileSize.Height) ? 1 : 0;
+				return y;
+			}
+		}
 		
 	}
 }
