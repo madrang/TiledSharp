@@ -20,7 +20,7 @@ namespace TiledSharp
 		public override Uri ResolveUri(Uri baseUri, string relativeUri)
 		{
 			if (relativeUri == @"http://mapeditor.org/dtd/1.0/map.dtd") {
-				string LocalDTD = Path.Combine("file://" + AssemblyDirectory, "Map1.0.dtd");
+				string LocalDTD = Path.Combine("file://" + AssemblyDirectory + "/DTD", "Map1.0.dtd");
 				return base.ResolveUri(baseUri, LocalDTD);
 			} else return base.ResolveUri(baseUri, relativeUri);
 		}
