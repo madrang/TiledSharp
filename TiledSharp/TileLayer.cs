@@ -1,4 +1,4 @@
-﻿//Author:
+//Author:
 //      Marc-Andre Ferland <madrang@gmail.com>
 //
 //Copyright (c) 2011 TheWarrentTeam
@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
     public partial class TileLayer : iLayer
     {

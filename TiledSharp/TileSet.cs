@@ -1,4 +1,4 @@
-﻿//Author:
+//Author:
 //      Marc-Andre Ferland <madrang@gmail.com>
 //
 //Copyright (c) 2011 TheWarrentTeam
@@ -28,7 +28,7 @@ using System.Drawing;
 using System.IO;
 using System.Xml;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
     /// <summary>
     /// A tileset that provides methods for reading tiles associated with this map.

@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	public partial class Map
 	{

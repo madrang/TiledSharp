@@ -1,4 +1,4 @@
-﻿//Author:
+//Author:
 //      Marc-Andre Ferland <madrang@gmail.com>
 //
 //Copyright (c) 2011 TheWarrentTeam
@@ -24,7 +24,7 @@
 using System;
 using System.Drawing;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
     /// <summary>
     /// Represents an image in a tiled map.

@@ -25,7 +25,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Xml;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
     public partial class ObjectGroup : Collection<MapObject>
 	{

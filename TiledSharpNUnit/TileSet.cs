@@ -22,7 +22,7 @@
 //THE SOFTWARE.
 
 using System;
-using TiledSharp;
+using TheWarrentTeam.TiledSharp;
 using NUnit.Framework;
 
 namespace TiledSharpNUnit

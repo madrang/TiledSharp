@@ -27,7 +27,7 @@ using System.IO.Compression;
 using System.Xml;
 using System.Drawing;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	public partial class TileLayer
     {

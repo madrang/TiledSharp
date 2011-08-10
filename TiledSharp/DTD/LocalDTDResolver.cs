@@ -26,7 +26,7 @@ using System.Reflection;
 using System.IO;
 using System.Xml;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	internal class LocalDTDResolver : XmlUrlResolver
 	{

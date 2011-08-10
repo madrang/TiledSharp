@@ -27,7 +27,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using System.Drawing;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	[Serializable]
 	public partial class Map : ISerializable

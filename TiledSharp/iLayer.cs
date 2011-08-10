@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	public interface iLayer
 	{

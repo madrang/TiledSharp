@@ -25,7 +25,7 @@ using System;
 using System.Drawing;
 using System.Xml;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
     public partial class ImageInfo
 	{

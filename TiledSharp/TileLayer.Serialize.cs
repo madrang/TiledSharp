@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	[Serializable]
 	public partial class TileLayer : ISerializable

@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	internal static class Helpers
 	{

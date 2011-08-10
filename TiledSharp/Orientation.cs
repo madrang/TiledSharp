@@ -23,7 +23,7 @@
 
 using System;
 
-namespace TiledSharp
+namespace TheWarrentTeam.TiledSharp
 {
 	public enum Orientation : byte
 	{
