@@ -1,7 +1,7 @@
 //Author:
 //      Marc-Andre Ferland <madrang@gmail.com>
 //
-//Copyright (c) 2011 TheWarrentTeam
+//Copyright (c) 2011 Linsft
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
 //THE SOFTWARE.
 
 using System;
-using TheWarrentTeam.TiledSharp;
+using Linsft.TiledSharp;
 using NUnit.Framework;
 
 namespace TiledSharpNUnit
@@ -97,7 +97,6 @@ namespace TiledSharpNUnit
 		public void TilePosition ()
 		{
 			TileSet TestSet = new TileSet();
-			
 
 			for (int TileSizeWidth = 1; TileSizeWidth <= 16; TileSizeWidth++) {
 				TestSet.TileSize.Width = TileSizeWidth;
@@ -179,8 +178,6 @@ namespace TiledSharpNUnit
 				}
 			}
 		}
-		
-		
 		
 	}
 }
