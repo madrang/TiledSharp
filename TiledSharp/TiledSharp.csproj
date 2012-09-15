@@ -34,8 +34,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
-    <Reference Include="zlib.net">
-      <HintPath>..\zlib.net.dll</HintPath>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\Ionic.Zlib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

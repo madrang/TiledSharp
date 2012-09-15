@@ -191,44 +191,7 @@ namespace Linsft.TiledSharp
 		
 		private static int[,] DecompressLayerZlib(Stream Input, int width, int height)
 		{
-			/*
-			int[,] Data = new int[width, height];
-			using(zlib.ZInputStream ZReader = new zlib.ZInputStream(Input)) {
-				for (int y = 0; y < height; y++) {
-					for (int x = 0; x < width; x++) {
-						try {
-							Data[x, y] = ZReader.ReadInt32 ();
-						} catch (Exception) {
-							Console.Write("Done [{0}, {1}]", x, y);
-							Console.WriteLine(" of [{0}, {1}]", width, height);
-							
-							Console.Write("Input {0}", Input.Position);
-							Console.WriteLine(" of {0}", Input.Length);
-							
-							Console.WriteLine("In {0}, Out {1}", ZReader.TotalIn, ZReader.TotalOut);
-							throw;
-						}
-					}
-				}
-			}
-			
-			return Data;
-			*/
-			
-			//FIXME For some reason ZInputStream deflate has no effect on data.
-			//Fixed temporarely by using ZOutputStream.
-			
-			MemoryStream ZlibDecompressed = new MemoryStream();
-			zlib.ZOutputStream Zout = new zlib.ZOutputStream(ZlibDecompressed);
-			
-			int ReadCount = 0;
-			byte[] Buf = new byte[1024];
-			do{
-				ReadCount = Input.Read(Buf, 0, Buf.Length);
-				Zout.Write(Buf, 0, ReadCount);
-			} while (ReadCount > 0);
-			
-			ZlibDecompressed.Position = 0;
+			Ionic.Zlib.ZlibStream ZlibDecompressed = new Ionic.Zlib.ZlibStream(Input, Ionic.Zlib.CompressionMode.Decompress);
 			return DecompressedLayer(ZlibDecompressed, width, height);
 		}
 
