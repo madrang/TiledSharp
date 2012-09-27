@@ -8,13 +8,13 @@
     <ProjectGuid>{A1179160-0067-4AA3-8A31-0BD34A649C3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>TiledSharpNUnit</RootNamespace>
-    <AssemblyName>TiledSharpNUnit</AssemblyName>
+    <AssemblyName>Linsft.TiledSharp.NUnit</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Binaries\Debug\TiledSharp</OutputPath>
+    <OutputPath>..\..\bin\Debug\TiledSharp\</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -23,7 +23,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Binaries\Release\TiledSharp</OutputPath>
+    <OutputPath>..\..\bin\Release\TiledSharp\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
