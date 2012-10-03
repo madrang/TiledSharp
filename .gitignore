@@ -24,12 +24,11 @@ Thumbs.db
 *.pidb
 *.dtd
 
-# NUnit #
-#########
-test-results/
-TiledSharpNUnit/bin/
-
 # Include #
 ###########
-!/Ionic.Zlib.dll
-!/TiledSharp/DTD/Map1.0.dtd
+!/Dependencies/*.dll
+!/Dependencies/*.dll.config
+!/Dependencies/*.so
+!/Dependencies/*/*.dll
+!/Dependencies/*/*.dll.config
+!/Dependencies/*/*.so
