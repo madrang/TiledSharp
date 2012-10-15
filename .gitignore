@@ -26,9 +26,4 @@ Thumbs.db
 
 # Include #
 ###########
-!/Dependencies/*.dll
-!/Dependencies/*.dll.config
-!/Dependencies/*.so
-!/Dependencies/*/*.dll
-!/Dependencies/*/*.dll.config
-!/Dependencies/*/*.so
+!/Ionic.Zlib.dll
